@@ -50,11 +50,11 @@ pthread // Mutex / threads, converted into real-time by compiling with xenomai
 
 *Initializes Raspberry GPIOs to monitor the motors*
 
-**void *tr_image(void *arg)**
+**void * tr_image(void * arg)**
 
 *Image processing function on which the 1st thread is running, allocates the returned coordinates of binarisation() to the barycentre point*
 
-**void *moteur(void *arg)**
+**void * moteur(void * arg)**
 
 *Motors pwm monitoring function (left, right, forward, reverse) on which the 2nd thread is running, robot direction is determined according to the x coordinate of the barycentre (reverse if it's -1)*
 
