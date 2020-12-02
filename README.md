@@ -1,7 +1,7 @@
 # line_tracking
 Line tracking real-time robot with Raspberry Pi and xenomai
 
-- Hardware
+- **Hardware**
 
 Raspberry Pi
 
@@ -14,7 +14,7 @@ Batterry + cable
 Wi-Fi key
 
 
-- Compilation
+- **Compilation**
 
 Power the Raspberry
 
@@ -31,7 +31,7 @@ $ ./tracking // Executable name
 ```
 
 
-- Required libraries
+- **Required libraries**
 
 opencv // Image processing
 
@@ -40,7 +40,7 @@ WiringPi // Motors monitoring: [wiringpi.com](https://wiringpi.com/)
 pthread // Mutex / threads, converted into real-time by compiling with xenomai
 
 
-- Code architecture
+- **Code architecture**
 
 **Point binarisation()**
 
@@ -54,7 +54,7 @@ pthread // Mutex / threads, converted into real-time by compiling with xenomai
 
 *Image processing function on which the 1st thread is running, allocates the returned coordinates of binarisation() to the barycentre point*
 
-** void *moteur(void *arg)**
+**void *moteur(void *arg)**
 
 *Motors pwm monitoring function (left, right, forward, reverse) on which the 2nd thread is running, robot direction is determined according to the x coordinate of the barycentre (reverse if it's -1)*
 
